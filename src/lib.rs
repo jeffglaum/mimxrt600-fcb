@@ -80,8 +80,8 @@ impl FlexSPIFlashConfigurationBlock {
             device_mode_seq: DeviceModeSeq::build(),
             device_mode_arg: [0, 0, 0, 0],
             config_cmd_enable: 0,
-            config_mode_type: [0; 3],
-            config_cmd_seqs: [1,2,0,0,0,0,0,0,0,0,0,0], // ***
+            config_mode_type: [0, 1, 2],
+            config_cmd_seqs: [0; 12],
             reserved2: [0; 4],
             config_cmd_args: [0; 12],
             reserved3: [0; 4],
