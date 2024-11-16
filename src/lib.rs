@@ -81,7 +81,7 @@ impl FlexSPIFlashConfigurationBlock {
             device_mode_arg: [0, 0, 0, 0],
             config_cmd_enable: 0,
             config_mode_type: [0; 3],
-            config_cmd_seqs: [0; 12],
+            config_cmd_seqs: [1,2,0,0,0,0,0,0,0,0,0,0], // ***
             reserved2: [0; 4],
             config_cmd_args: [0; 12],
             reserved3: [0; 4],
@@ -113,12 +113,12 @@ impl FlexSPIFlashConfigurationBlock {
             is_uniform_block_size: 0,
             is_data_order_swapped: 0,
             reserved6: [0; 1],
-            serial_nor_type: SerialNORType::Xpi,
+            serial_nor_type: SerialNORType::StandardSpi,
             need_exit_no_cmd_mode: 0,
             half_clk_for_non_read_cmd: 0,
             need_restore_no_cmd_mode: 0,
             block_size: 0x10_000,
-            flash_state_ctx: 0x07008200,
+            flash_state_ctx: 0,
             reserved7: [0; 40],
         }
     }
