@@ -63,7 +63,7 @@ pub struct FlexSPIFlashConfigurationBlock {
 
 impl FlexSPIFlashConfigurationBlock {
     const TAG: u32 = 0x42464346;
-    const VERSION: u32 = 0x56020000;
+    const VERSION: u32 = 0x56010400;
 
     pub const fn build() -> Self {
         Self {
@@ -75,7 +75,7 @@ impl FlexSPIFlashConfigurationBlock {
             cs_setup_time: 3,
             column_address_width: ColumnAddressWidth::Other,
             device_mode_cfg_enable: 0,
-            reserved1: [2; 1],
+            reserved1: [0; 1],
             wait_time_cfg_commands: 0,
             device_mode_seq: DeviceModeSeq::build(),
             device_mode_arg: [0, 0, 0, 0],
@@ -88,7 +88,7 @@ impl FlexSPIFlashConfigurationBlock {
             controller_misc_option: ControllerMiscOption(0x10),
             device_type: DeviceType::SerialNOR,
             sflash_pad_type: SFlashPadType::QuadPads,
-            serial_clk_freq: SerialClkFreq::SdrDdr30mhz,
+            serial_clk_freq: SerialClkFreq::SdrDdr50mhz,
             lut_custom_seq_enable: 0,
             reserved4: [0; 8],
             sflash_a1_size: 0x04000000,
@@ -104,7 +104,7 @@ impl FlexSPIFlashConfigurationBlock {
             data_valid_time: 0,
             busy_offset: 0,
             busy_bit_polarity: BusyBitPolarity::Normal,
-            lookup_table: [0; 64 ],
+            lookup_table: [0; 64],
             lut_custom_seq: [0; 48],
             reserved5: [0; 16],
             page_size: 256,
