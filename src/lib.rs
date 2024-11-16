@@ -91,7 +91,7 @@ impl FlexSPIFlashConfigurationBlock {
             serial_clk_freq: SerialClkFreq::SdrDdr50mhz,
             lut_custom_seq_enable: 0,
             reserved4: [0; 8],
-            sflash_a1_size: 0x04000000,
+            sflash_a1_size: 0x00400000,
             sflash_a2_size: 0,
             sflash_b1_size: 0,
             sflash_b2_size: 0,
